@@ -34,7 +34,7 @@ public class HeroController {
   @GetMapping("/heroes/{id}")
   public Mono<ResponseEntity<Hero>> getHeroById(@PathVariable(value = "id") String heroId) {
     return heroRepository.findById(heroId)
-      .map(savedTweet -> ResponseEntity.ok(savedTweet))
+      .map(savedHero -> ResponseEntity.ok(savedHero))
       .defaultIfEmpty(ResponseEntity.notFound().build());
   }
 
