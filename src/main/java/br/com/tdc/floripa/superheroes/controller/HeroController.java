@@ -46,7 +46,7 @@ public class HeroController {
         existingHero.setName(hero.getName());
         return heroRepository.save(existingHero);
       })
-      .map(updateTweet -> new ResponseEntity<>(updateTweet, HttpStatus.OK))
+      .map(updateHero -> new ResponseEntity<>(updateHero, HttpStatus.OK))
       .defaultIfEmpty(new ResponseEntity<>(HttpStatus.NOT_FOUND));
   }
 
