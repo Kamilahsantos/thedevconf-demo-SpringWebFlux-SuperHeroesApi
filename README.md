@@ -8,5 +8,7 @@ Demo para palestra na trilha java do TDC Floripa Online 2020
 * Reactor
 * Junit
 * MongoDb
+* Spring Boot Admin
+* Spring Boot Actuator
 
 
