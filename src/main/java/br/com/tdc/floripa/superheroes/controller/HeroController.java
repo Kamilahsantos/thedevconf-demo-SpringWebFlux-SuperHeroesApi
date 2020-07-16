@@ -73,7 +73,7 @@ public class HeroController {
   }
 
   @ExceptionHandler(HeroNotFoundException.class)
-  public ResponseEntity handleTweetNotFoundException(HeroNotFoundException ex) {
+  public ResponseEntity handleHeroNotFoundException(HeroNotFoundException ex) {
     return ResponseEntity.notFound().build();
   }
 }

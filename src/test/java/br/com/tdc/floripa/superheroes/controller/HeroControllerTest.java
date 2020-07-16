@@ -33,13 +33,5 @@ public class HeroControllerTest {
       .expectBodyList(Hero.class);
   }
 
-  @Test
-  public void testDeleteTweet() {
-    Hero hero = heroRepository.save(new Hero("To be deleted")).block();
 
-    webTestClient.delete()
-      .uri("/heroes/{id}", Collections.singletonMap("id",  hero.getId()))
-      .exchange()
-      .expectStatus().isOk();
-  }
 }
